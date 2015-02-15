@@ -1,38 +1,3 @@
-/* AngularJS responsive layout with left/mobile slide menu */
-.menuBtn {
-	background-color: transparent;
-	border: none;
-	height: 38px;
-	margin: 16px;
-	position: absolute;
-	width: 36px;
-}
-
-md-list .md-button {
-	color: inherit;
-	font-weight: 500;
-	text-align: left;
-	width: 100%;
-}
-
-.visually-hidden {
-	border: 0;
-	clip: rect(0000);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-
-/* Using Data-URI converted from svg until <md-icon> becomes available 
-https://github.com/google/material-design-icons
-*/
-.menuBtn {
-	background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9IkhlYWRlciI+CiAgICA8Zz4KICAgICAgICA8cmVjdCB4PSItNjE4IiB5PSItMjIzMiIgZmlsbD0ibm9uZSIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMzYwMCIvPgogICAgPC9nPgo8L2c+CjxnIGlkPSJMYWJlbCI+CjwvZz4KPGcgaWQ9Ikljb24iPgogICAgPGc+CiAgICAgICAgPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CiAgICAgICAgPHBhdGggZD0iTTMsMThoMTh2LTJIM1YxOHogTTMsMTNoMTh2LTJIM1YxM3ogTTMsNnYyaDE4VjZIM3oiIHN0eWxlPSJmaWxsOiNmM2YzZjM7Ii8+CiAgICA8L2c+CjwvZz4KPGcgaWQ9IkdyaWQiIGRpc3BsYXk9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) no-repeat center center;
-}
-
 /*!
  * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -85,7 +50,7 @@ body,h1,h2,h3,h4,h5,h6 {
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
-@mediamax-width767px {
+@media and (max-width:767px) {
 .intro-message {
 	padding-bottom: 15%;
 }
@@ -159,14 +124,14 @@ ul.intro-social-buttons > li:last-child {
 	margin-top: 0;
 }
 
-@mediamax-width1199px {
+@media and (max-width:1199px) {
 ul.banner-social-buttons {
 	float: left;
 	margin-top: 15px;
 }
 }
 
-@mediamax-width767px {
+@media and (max-width:767px) {
 .banner h2 {
 	margin: 0;
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
@@ -193,86 +158,6 @@ p.copyright {
 	margin: 15px 0 0;
 }
 
-/* Brian's Customizations */
-.brian-header {font-size:14px; position:absolute; right:1%; text-align:right; line-height:50px;}
-
-.btn-primary {
-	padding: 13px 12px;
-}
-
-.md-subheader {
-	font-size: 1.6em;
-}
-
-.md-subheader.md-sticky-clone {
-	color: #FFF!important;
-}
-
-.md-subheader.md-sticky-clone:after {
-	background: #337ab7;
-}
-
-.md-tile-left a {
-	display: table-cell;
-	vertical-align: middle;
-	width: 120px;
-	text-align: center;
-	height: 120px;
-	border-radius: 200px;
-	color: #FFF;
-	font-size: 1em;
-	background: #1e5799;
-	background: -moz-linear-gradient(-45deg,rgba(30,87,153,1) 0 rgba(41,137,216,1) 50% rgba(32,124,202,1) 51% rgba(125,185,232,1) 100%;
-	background: -webkit-gradient(linear,lefttop,rightbottom,color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1)));
-	background: -webkit-linear-gradient(-45deg,rgba(30,87,153,1) 0 50% 51% 100%;
-	background: -o-linear-gradient(-45deg,rgba(30,87,153,1) 0 50% 51% 100%;
-	background: -ms-linear-gradient(-45deg,rgba(30,87,153,1) 0 50% 51% 100%;
-	background: linear-gradient(135deg,rgba(30,87,153,1) 0 50% 51% 100%;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799',endColorstr='#7db9e8',GradientType=1);
-}
-
-.md-tile-left {
-	margin-right: 20px;
-}
-
-.md-tile-content .description {
-	font-size: 1.4em;
-}
-
-.md-tile-content ul {
-	padding-left: 0;
-}
-
-.md-tile-content li {
-	float: left;
-	display: inline-block;
-	background: #ccc;
-	margin: 0 2px;
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-o-border-radius: 6px;
-	-ms-border-radius: 6px;
-	text-align: center;
-	list-style-type: none;
-}
-
-.md-tile-content li span {
-	display: block;
-	padding: 10px 20px;
-}
-
-.dupe-for-mob {
-	display: none;
-}
-
-.indicator {
-	width: 50px;
-	padding: 50px 0;
-	margin: 0 auto;
-	text-align: center;
-}
-
 md-sidenav, 
 md-sidenav.md-locked-open, 
 md-sidenav.md-closed.md-locked-open-add-active {
@@ -281,7 +166,7 @@ md-sidenav.md-closed.md-locked-open-add-active {
     max-width: 150px !important;
 }
 
-@media screen and max-width767px {
+@media screen and (max-width:767px) {
 .form-control {
 	width: 93%;
 	margin-bottom: 10px;
@@ -316,4 +201,114 @@ md-sidenav.md-closed.md-locked-open-add-active {
 	padding-top: 8px;
 	color: #777;
 }
+}
+
+
+/* AngularJS responsive layout with left/mobile slide menu */
+.menuBtn {
+	background-color: transparent;
+	border: none;
+	height: 38px;
+	margin: 16px;
+	position: absolute;
+	width: 36px;
+}
+
+md-list .md-button {
+	color: inherit;
+	font-weight: 500;
+	text-align: left;
+	width: 100%;
+}
+
+.visually-hidden {
+	border: 0;
+	clip: rect(0000);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* Using Data-URI converted from svg until <md-icon> becomes available 
+https://github.com/google/material-design-icons
+*/
+.menuBtn {
+	background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9IkhlYWRlciI+CiAgICA8Zz4KICAgICAgICA8cmVjdCB4PSItNjE4IiB5PSItMjIzMiIgZmlsbD0ibm9uZSIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMzYwMCIvPgogICAgPC9nPgo8L2c+CjxnIGlkPSJMYWJlbCI+CjwvZz4KPGcgaWQ9Ikljb24iPgogICAgPGc+CiAgICAgICAgPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CiAgICAgICAgPHBhdGggZD0iTTMsMThoMTh2LTJIM1YxOHogTTMsMTNoMTh2LTJIM1YxM3ogTTMsNnYyaDE4VjZIM3oiIHN0eWxlPSJmaWxsOiNmM2YzZjM7Ii8+CiAgICA8L2c+CjwvZz4KPGcgaWQ9IkdyaWQiIGRpc3BsYXk9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) no-repeat center center;
+}
+
+
+/* Brian's Customizations */
+.brian-header {font-size:14px; position:absolute; right:1%; text-align:right; line-height:50px;}
+
+.btn-primary {
+	padding: 13px 12px;
+}
+
+.md-subheader {
+	font-size: 1.6em;
+}
+
+.md-subheader.md-sticky-clone {
+	color: #FFF!important;
+}
+
+.md-subheader.md-sticky-clone:after {
+	background: #337ab7;
+}
+
+.md-tile-left a {
+	display: table-cell;
+	vertical-align: middle;
+	width: 120px;
+	text-align: center;
+	height: 120px;
+	border-radius: 200px;
+	color: #FFF;
+	font-size: 1em;
+	background: #1e5799;
+}
+
+.md-tile-left {
+	margin-right: 20px;
+}
+
+.md-tile-content p.description {
+	font-size: 1.4em !important;
+}
+
+.md-tile-content ul {
+	padding-left: 0;
+}
+
+.md-tile-content li {
+	float: left;
+	display: inline-block;
+	background: #ccc;
+	margin: 0 2px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	-ms-border-radius: 6px;
+	text-align: center;
+	list-style-type: none;
+}
+
+.md-tile-content li span {
+	display: block;
+	padding: 10px 20px;
+}
+
+.dupe-for-mob {
+	display: none;
+}
+
+.indicator {
+	width: 50px;
+	padding: 50px 0;
+	margin: 0 auto;
+	text-align: center;
 }
