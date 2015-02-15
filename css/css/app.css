@@ -1,0 +1,142 @@
+/* AngularJS responsive layout with left/mobile slide menu */ 
+.menuBtn {
+  background-color: transparent;
+  border: none;
+  height: 38px;
+  margin: 16px;
+  position: absolute;
+  width: 36px;
+} 
+md-list .md-button {
+  color: inherit;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0; 
+  position: absolute;
+  width: 1px;
+}
+
+/* Using Data-URI converted from svg until <md-icon> becomes available 
+https://github.com/google/material-design-icons
+*/
+.menuBtn {
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9IkhlYWRlciI+CiAgICA8Zz4KICAgICAgICA8cmVjdCB4PSItNjE4IiB5PSItMjIzMiIgZmlsbD0ibm9uZSIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMzYwMCIvPgogICAgPC9nPgo8L2c+CjxnIGlkPSJMYWJlbCI+CjwvZz4KPGcgaWQ9Ikljb24iPgogICAgPGc+CiAgICAgICAgPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CiAgICAgICAgPHBhdGggZD0iTTMsMThoMTh2LTJIM1YxOHogTTMsMTNoMTh2LTJIM1YxM3ogTTMsNnYyaDE4VjZIM3oiIHN0eWxlPSJmaWxsOiNmM2YzZjM7Ii8+CiAgICA8L2c+CjwvZz4KPGcgaWQ9IkdyaWQiIGRpc3BsYXk9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) no-repeat  center center;
+}
+
+/* Brian's Custom CSS - "the goods" */
+
+.css-chal label {width:100%; display:block; text-align:center; font-size:20px; padding:20px 0; background:#CCC; cursor:pointer;}
+.css-chal input {display:none;}
+
+.little-boxes {clear:both; font-size:30px;}
+/* Default State */
+.little-boxes div {
+line-height:200px;
+color: white;
+text-align: center;
+margin-bottom:2px;
+font-size:100%;
+cursor:crosshair;
+-webkit-transition: background-color 0.5s ease;
+transition: background-color 0.5s ease;
+position:relative;
+-webkit-animation: scAnim 2s;
+animation: scAnim 2s;
+}
+.little-boxes div:nth-child(odd) {
+background: rgb(203,96,179);
+background: -moz-linear-gradient(-45deg,  rgba(203,96,179,1) 0%, rgba(173,18,131,1) 50%, rgba(222,71,172,1) 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(203,96,179,1)), color-stop(50%,rgba(173,18,131,1)), color-stop(100%,rgba(222,71,172,1)));
+background: -webkit-linear-gradient(-45deg,  rgba(203,96,179,1) 0%,rgba(173,18,131,1) 50%,rgba(222,71,172,1) 100%);
+background: -o-linear-gradient(-45deg,  rgba(203,96,179,1) 0%,rgba(173,18,131,1) 50%,rgba(222,71,172,1) 100%);
+background: -ms-linear-gradient(-45deg,  rgba(203,96,179,1) 0%,rgba(173,18,131,1) 50%,rgba(222,71,172,1) 100%);
+background: linear-gradient(135deg,  rgba(203,96,179,1) 0%,rgba(173,18,131,1) 50%,rgba(222,71,172,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#de47ac',GradientType=1 );
+
+}
+.little-boxes div:nth-child(even) {
+background: rgb(229,112,231);
+background: -moz-linear-gradient(-45deg,  rgba(229,112,231,1) 0%, rgba(168,73,163,1) 50%, rgba(200,94,199,1) 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(229,112,231,1)), color-stop(50%,rgba(168,73,163,1)), color-stop(100%,rgba(200,94,199,1)));
+background: -webkit-linear-gradient(-45deg,  rgba(229,112,231,1) 0%,rgba(168,73,163,1) 50%,rgba(200,94,199,1) 100%);
+background: -o-linear-gradient(-45deg,  rgba(229,112,231,1) 0%,rgba(168,73,163,1) 50%,rgba(200,94,199,1) 100%);
+background: -ms-linear-gradient(-45deg,  rgba(229,112,231,1) 0%,rgba(168,73,163,1) 50%,rgba(200,94,199,1) 100%);
+background: linear-gradient(135deg,  rgba(229,112,231,1) 0%,rgba(168,73,163,1) 50%,rgba(200,94,199,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e570e7', endColorstr='#c85ec7',GradientType=1 );
+}
+.little-boxes div:hover:nth-child(odd) {
+background: rgb(229,112,231);
+}
+.little-boxes div:hover:nth-child(even) {
+background: rgb(203,96,179);
+}
+
+@-webkit-keyframes scAnim {
+    0%   {left:0; margin-top:100%; border-radius:500px; line-height:40px; opacity:0;}
+    80%  {left:0; margin-top:-5%; transform:scale(0.8);}
+    100%  {left:0; margin-top:0; transform:scale(1); border-radius:8px; line-height:200px; opacity:1;}
+}
+
+@keyframes scAnim {
+   	0%   {left:0; margin-top:100%; border-radius:500px; line-height:40px; opacity:0;}
+    80%  {left:0; margin-top:-5%; transform:scale(0.8);}
+    100%  {left:0; margin-top:0; transform:scale(1); border-radius:8px; line-height:200px; opacity:1;}
+}
+
+
+/* Toggled State */
+input[type=checkbox]:checked ~ .little-boxes div {
+color:#6d0019;
+
+background: rgb(214,214,214);
+background: -moz-linear-gradient(-45deg,  rgba(214,214,214,1) 0%, rgba(170,170,170,1) 50%, rgba(229,229,229,1) 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(214,214,214,1)), color-stop(50%,rgba(170,170,170,1)), color-stop(100%,rgba(229,229,229,1)));
+background: -webkit-linear-gradient(-45deg,  rgba(214,214,214,1) 0%,rgba(170,170,170,1) 50%,rgba(229,229,229,1) 100%);
+background: -o-linear-gradient(-45deg,  rgba(214,214,214,1) 0%,rgba(170,170,170,1) 50%,rgba(229,229,229,1) 100%);
+background: -ms-linear-gradient(-45deg,  rgba(214,214,214,1) 0%,rgba(170,170,170,1) 50%,rgba(229,229,229,1) 100%);
+background: linear-gradient(135deg,  rgba(214,214,214,1) 0%,rgba(170,170,170,1) 50%,rgba(229,229,229,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#e5e5e5',GradientType=1 );
+
+
+}
+
+.brian-header {font-size:14px; position:absolute; right:1%; text-align:right; line-height:50px;}
+
+md-sidenav, 
+md-sidenav.md-locked-open, 
+md-sidenav.md-closed.md-locked-open-add-active {
+    min-width: 150px !important;
+    width: 150px !important;
+    max-width: 150px !important;
+} 
+
+@media screen and (max-width:600px) {
+.little-boxes div {font-size:120%;}
+}
+
+/* This appears to be BROKEN (as best as I can tell) within angular-material.min.css - fixed it below by adding overriding styles */
+[layout=row]>[flex-gt-lg="50"] {
+max-width: 50% !important;
+width:50% !important;
+min-width:50% !important;
+-webkit-flex:0 0 50% !important;
+-ms-flex:0 0 50% !important;
+flex:0 0 50% !important;
+}
+
+@media screen and (min-width:1024px) {
+.little-boxes div {max-width: 50% !important;
+width:50% !important;
+min-width:50% !important;
+-webkit-flex:0 0 50% !important;
+-ms-flex:0 0 50% !important;
+flex:0 0 50% !important;}
+}
